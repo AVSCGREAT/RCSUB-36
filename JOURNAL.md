@@ -1,6 +1,6 @@
 ---
 title: "RC Submarine"
-author: "@AVSC" + "@Kastriya"
+author: "@AVSC"  "@Kastriya"
 description: "Low-cost, open-source RC submarine for robotics & STEM exploration"
 created_at: "2025-07-21"
 total time spent: "~32hrs"
