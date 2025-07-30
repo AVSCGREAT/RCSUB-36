@@ -1,4 +1,4 @@
-# RC Submarine HackClub Project
+# RC Submarine
 
 ## Overview
 
@@ -23,7 +23,7 @@ This project aims to build a compact, WiFi-controlled submarine equipped with an
 
 The system is wireless but includes a tether fallback for power or control in case of signal loss. Designed with an acrylic waterproof body, custom 3D-printed parts, and epoxy-sealed electronics, the sub can perform basic underwater maneuvers and real-time monitoring.
 
-🧩 Key Features:
+ Key Features:
 | Feature                | Component Used                 | Purpose                              |
 | ---------------------- | ------------------------------ | ------------------------------------ |
 | FPV Video Streaming    | ESP32-CAM                      | Real-time video wirelessly           |
@@ -58,27 +58,33 @@ The system is wireless but includes a tether fallback for power or control in ca
 
 ## Budget and BOM
 
-Full BOM is in the CSV file: [rc_submarine_bom.csv]
+## Component Breakdown
 
-Estimated Total Cost: **$176 USD (~₹14,700)**
+| Component                    | Quantity | Approx. Cost (INR) | Notes |
+|-----------------------------|----------|---------------------|-------|
+| ESP32-CAM                   | 1        | ₹650                | Live camera and WiFi control |
+| Waterproof BLDC motors      | 2        | ₹2400               | Core propulsion unit |
+| SG90 servo motors           | 2        | ₹400                | Controls steering fins |
+| MS5803 or BMP280 sensor     | 1        | ₹1000               | Depth sensing via water pressure |
+| MPU6050 IMU                 | 1        | ₹300                | Orientation and pitch detection |
+| DS18B20 waterproof sensor   | 1        | ₹200                | Measures underwater temperature |
+| SD card + adapter module    | 1        | ₹750                | Data logging functionality |
+| Acrylic tube + end caps     | 1        | ₹1200               | Core waterproof enclosure |
+| O-rings, epoxy, seals       | -        | ₹850                | Ensures leak-proof housing |
+| PLA filament (1kg)          | -        | ₹1100               | For 3D printing components |
+| Misc: wires, screws, heat shrink | -   | ₹700                | Connectors, stabilizers, mounting |
+
+**Total estimated cost: ₹11,550 - ₹13,000** (varies by sensor availability)
+
+Estimated Total Cost: **$170 USD**
+
 
 ---
 
-✅ PHASE-WISE MASTER PLAN (4 Weeks Build)
-| **Phase**                           | **Duration** | **Focus**                               | **Goals**                                                                                      |
-| ----------------------------------- | ------------ | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Phase 1: Design + Research**      | 3 Days       | Understanding systems & waterproofing   | Finalize design, list all STL parts, check working voltages, sketch wiring, plan inside layout |
-| **Phase 2: Procurement**            | 3-4 Days     | Order & collect parts                   | Purchase all electronics, waterproof motors, LiPo, acrylic tube, O-rings, sealants             |
-| **Phase 3: Electronics + Code**     | 5 Days       | Soldering + ESP32-CAM + sensors setup   | ESP32-CAM live streaming, test sensors (temp, IMU, pressure), servo testing                    |
-| **Phase 4: Mechanical Build**       | 5 Days       | 3D print & waterproof the body          | Print STL mounts, assemble tube + caps, epoxy sealings, mount motor shafts, servo positions    |
-| **Phase 5: Integration & Dry Test** | 4 Days       | Fit everything, run tests outside water | Dry test all electronics together, SD logging, camera, motors, IMU orientation                 |
-| **Phase 6: Water Test**             | 3 Days       | Shallow testing + tweaks                | Small bucket test first → then pool → test buoyancy, leak check, video, depth sensor           |
-| **Phase 7: Final Tuning**           | 2–3 Days     | Add lights, stabilize control           | PID tuning (if needed), tune IMU data, improve signal strength, backup tether setup            |
 
-🎯 Why This Deserves a Grant:
-🔥 "We're not just building a robot — we're opening the deep waters to young minds who otherwise never imagined being marine innovators. One project. One submarine. A whole new world unlocked."
+## Open Source Plan
 
-🚀 With your grant, I will turn this submarine into a replicable open-source project — complete with STL files, code, assembly guides, and documentation — allowing anyone, anywhere in the world to build their own underwater explorer.
+All source files—including STL files, wiring schematics, and Arduino code—will be documented and published on GitHub. Full replication instructions will be provided for students, teachers, and open-source contributors.
 
 ## License
 
